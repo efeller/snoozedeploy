@@ -37,7 +37,7 @@ ssh_command="/usr/bin/ssh -i $ssh_private_key"
 python="/usr/bin/python"
 
 ## SCP tsunami settings 
-scp_tsunami_command="/opt/scp-tsunami/scpTsunamiA.py"
+scp_tsunami_command="./scptsunami/scpTsunamiA.py"
 
 ## SCP settings
 scp_command="/usr/bin/scp -p -r"
