@@ -22,4 +22,4 @@
 scriptpath=$(dirname $0)
 source $scriptpath/environment.sh
 
-chown -R $user:$group $directory
+chown -R $user:$group $nfs_directory
