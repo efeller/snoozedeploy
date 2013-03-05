@@ -1,0 +1,12 @@
+default = rennes
+luxembourg = kadeploy-server.luxembourg.grid5000.fr:25300
+bordeaux = kadeploy-server.bordeaux.grid5000.fr:25300
+grenoble = kadeploy-server.grenoble.grid5000.fr:25300
+lille = kadeploy-server.lille.grid5000.fr:25300
+lyon = kadeploy-server.lyon.grid5000.fr:25300
+nancy = kadeploy-server.nancy.grid5000.fr:25300
+orsay = kadeploy-server.orsay.grid5000.fr:25300
+rennes = kadeploy-server.rennes.grid5000.fr:25300
+sophia = kadeploy-server.sophia.grid5000.fr:25300
+toulouse = kadeploy-server.toulouse.grid5000.fr:25300
+reims = kadeploy-server.reims.grid5000.fr:25300
