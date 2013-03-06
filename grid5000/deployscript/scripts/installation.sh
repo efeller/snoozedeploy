@@ -25,11 +25,12 @@ install_dependencies() {
 	fi
 
 	echo "$log_tag Installing system dependencies"
- 	run_taktuk "$tmp_directory/bootstrap_nodes.txt" exec "[ $remote_scripts_directory/install_bootstrap_dependencies.sh ]"
+    run_taktuk "$tmp_directory/bootstrap_nodes.txt" exec "[ $remote_scripts_directory/install_bootstrap_dependencies.sh ]"
     run_taktuk "$tmp_directory/group_managers.txt" exec "[ $remote_scripts_directory/install_groupmanager_dependencies.sh ]"
     run_taktuk "$tmp_directory/group_managers.txt" exec "[ dpkg -i --force-all -R $kapower_packages_directory ]"
     run_taktuk "$tmp_directory/local_controllers.txt" exec "[ $remote_scripts_directory/install_localcontroller_dependencies.sh ]"
-	install_snooze_packages
+    install_snooze_packages
+    copy_ssh_keys
 }
 
 install_snooze_packages() {

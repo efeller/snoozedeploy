@@ -17,6 +17,10 @@
 # 02110-1301, USA
 #
 
+copy_ssh_keys() {
+    run_taktuk "$tmp_directory/hosts_list.txt" put "[ $ssh_private_key ] [ /root/.ssh/$ssh_key_name ]"
+}
+
 # Creates a list of hosts
 create_hosts_list () {
     local job_resource_list="/var/lib/oar/$1"

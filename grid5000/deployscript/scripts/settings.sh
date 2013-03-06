@@ -40,7 +40,8 @@ deploy_script_directory="$g5k_scripts_directory/deployscript"
 katapult_command="$deploy_script_directory/katapult/katapult3"
 
 # SSH settings
-ssh_private_key="$HOME/.ssh/id_dsa"
+ssh_key_name="id_dsa"
+ssh_private_key="$HOME/.ssh/$ssh_key_name"
 ssh_command="ssh -o PasswordAuthentication=no -o StrictHostKeyChecking=no -i $ssh_private_key"
 
 # RSYNC settings
