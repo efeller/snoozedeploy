@@ -37,7 +37,7 @@ g5k_scripts_directory="$HOME/snoozedeploy/grid5000"
 deploy_script_directory="$g5k_scripts_directory/deployscript"
 
 # Katapult
-katapult_command="$deploy_script_directory/katapult/katapult3"
+katapult_command="/grid5000/code/bin/katapult3"
 
 # SSH settings
 ssh_key_name="id_dsa"
