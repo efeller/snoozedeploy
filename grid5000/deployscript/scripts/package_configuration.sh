@@ -22,9 +22,9 @@
 # Configure packages
 configure_packages() {
     echo "$log_tag Starting the package configuration procedure"
-
-	configure_libvirt
-    create_and_deploy_kapower_configuration
+    
+    configure_libvirt
+    #create_and_deploy_kapower_configuration
     create_and_deploy_client_configuration
     create_and_deploy_zookeeper_configuration
 

@@ -18,23 +18,23 @@
 #
 
 install_dependencies() {
-	create_component_host_files
-	if [[ $? -ne $success_code ]]
-	then
-	 return $error_code
-	fi
+    create_component_host_files
+    if [[ $? -ne $success_code ]]
+    then
+       return $error_code
+    fi
 
-	echo "$log_tag Installing system dependencies"
+    echo "$log_tag Installing system dependencies"
     copy_ssh_keys
-    run_taktuk "$tmp_directory/bootstrap_nodes.txt" exec "[ $remote_scripts_directory/install_bootstrap_dependencies.sh ]"
-    run_taktuk "$tmp_directory/group_managers.txt" exec "[ $remote_scripts_directory/install_groupmanager_dependencies.sh ]"
-    run_taktuk "$tmp_directory/group_managers.txt" exec "[ dpkg -i --force-all -R $kapower_packages_directory ]"
-    run_taktuk "$tmp_directory/local_controllers.txt" exec "[ $remote_scripts_directory/install_localcontroller_dependencies.sh ]"
-    run_taktuk "$tmp_directory/hosts_list.txt" exec "[ apt-get -f -y install ]"
-    install_snooze_packages
+#    run_taktuk "$tmp_directory/bootstrap_nodes.txt" exec "[ $remote_scripts_directory/install_bootstrap_dependencies.sh ]"
+#    run_taktuk "$tmp_directory/group_managers.txt" exec "[ $remote_scripts_directory/install_groupmanager_dependencies.sh ]"
+#    #run_taktuk "$tmp_directory/group_managers.txt" exec "[ dpkg -i --force-all -R $kapower_packages_directory ]"
+#    run_taktuk "$tmp_directory/local_controllers.txt" exec "[ $remote_scripts_directory/install_localcontroller_dependencies.sh ]"
+#    run_taktuk "$tmp_directory/hosts_list.txt" exec "[ apt-get -f -y install ]"
+#    install_snooze_packages
 }
 
 install_snooze_packages() {
     echo "$log_tag Installing packages on all hosts"
-	run_taktuk "$tmp_directory/hosts_list.txt" exec "[ export TERM=linux; dpkg -i --force-all -R $snooze_packages_directory ]"
+    run_taktuk "$tmp_directory/hosts_list.txt" exec "[ export TERM=linux; dpkg -i --force-all -R $snooze_packages_directory ]"
 }
