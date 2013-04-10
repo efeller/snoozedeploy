@@ -19,10 +19,10 @@
 
 # Runs the taktuk command on a list of machines
 run_taktuk () {
-    taktuk -c "$ssh_command" -l root -s -f $1 broadcast $2 $3 
+    taktuk -l root -s -f $1 broadcast $2 $3 
 }
 
 # Runs the taktuk command on a single machine
 run_taktuk_single_machine () {
-    taktuk -c "$ssh_command" -l root -s -m $1 broadcast $2 $3
+    taktuk -l root -s -m $1 broadcast $2 $3
 }

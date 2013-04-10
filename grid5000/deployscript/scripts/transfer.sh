@@ -20,7 +20,7 @@
 # Transfers backing virtual machine image
 transfer_backing_virtual_machine_image () {
     echo "$log_tag Transfering backing virtual machine image"
-    transfer_data "$source_images_directory/*" "$destination_images_directory/"
+    transfer_data "$backing_file_path" "$destination_images_directory/"
 }
 
 # Transfers the experiment script

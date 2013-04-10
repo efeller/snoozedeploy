@@ -71,13 +71,15 @@ remote_scripts_directory="$deploy_script_directory/scripts/remote"
 # Virtual machine image settings
 destination_snooze_directory="/tmp/snooze"
 source_images_directory="$HOME/vmimages"
+backing_file_name="hadoop-frieda-lyon-ubuntu-12.10.qcow2"
+backing_file_path="$source_images_directory/$backing_file_name"
 destination_images_directory="$destination_snooze_directory/images"
 
 source_experiments_script_directory="$g5k_scripts_directory/experiments"
 destination_experiments_script_directory="$destination_snooze_directory/experiments"
 
 # Cluster settings
-cluster_location="lyon"
+cluster_location="rennes"
 storage_type="local"
 
 # Deployment and installation related settings
@@ -93,7 +95,7 @@ number_of_local_controllers=16
 number_of_subnets=1
 
 # Deployment specific settings
-multicast_address="225.4.5.6"
+multicast_address="225.4.2.6"
 start_control_data_port=5000
 start_monitoring_data_port=6000
 start_group_manager_heartbeat_mcast_port=10000
