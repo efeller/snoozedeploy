@@ -18,7 +18,10 @@
 #
 
 copy_ssh_keys() {
-    run_taktuk "$tmp_directory/hosts_list.txt" put "[ $ssh_private_key ] [ /root/.ssh/$ssh_key_name ]"
+    for i in `cat $tmp_directory/hosts_list.txt`;
+    do
+	scp -pr $ssh_private_key root@$i:~/.ssh/$ssh_key_name
+    done
 }
 
 # Creates a list of hosts

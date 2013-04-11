@@ -68,12 +68,8 @@ template_name="debian_kvm.xml"
 template_prefix="debian_kvm_"
 
 ## Image names
-backing_file_distribution="squeeze"
-backing_file_application="mapreduce"
-backing_file_cluster_location="rennes"
-backing_file_type="qcow2"
-backing_file_name="$backing_file_distribution-$backing_file_application-vm-snooze-$backing_file_cluster_location.$backing_file_type"
-copy_on_write_file_prefix="$backing_file_distribution-$backing_file_application-vm-snooze-$backing_file_cluster_location-cow-"
+backing_file_name="testing-web-vm-snooze-rennes.raw"
+copy_on_write_file_prefix="snooze-vm-cow-"
 
 # VM settings
 max_memory="8388608"
