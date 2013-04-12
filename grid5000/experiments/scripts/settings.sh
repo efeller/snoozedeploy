@@ -40,7 +40,7 @@ python="/usr/bin/python"
 scp_tsunami_command="./scptsunami/scpTsunamiA.py"
 
 ## SCP settings
-scp_command="/usr/bin/scp -p -r"
+scp_command="/usr/bin/scp -p -r -o StrictHostKeyChecking=no"
 
 ## RSYNC settings
 export RSYNC_RSH=$ssh_command
@@ -68,13 +68,13 @@ template_name="debian_kvm.xml"
 template_prefix="debian_kvm_"
 
 ## Image names
-backing_file_name="testing-web-vm-snooze-rennes.raw"
+backing_file_name="squeeze-mapreduce-mpi-vm-snooze-rennes.qcow2"
 copy_on_write_file_prefix="snooze-vm-cow-"
 
 # VM settings
-max_memory="8388608"
-current_memory="8388608"
-number_of_virtual_cpus="4"
+max_memory="2388608"
+current_memory="2388608"
+number_of_virtual_cpus="1"
 
 # Networking settings
 bridge_name="virbr0"

@@ -71,7 +71,7 @@ remote_scripts_directory="$deploy_script_directory/scripts/remote"
 # Virtual machine image settings
 destination_snooze_directory="/tmp/snooze"
 source_images_directory="$HOME/vmimages"
-backing_file_name="testing-web-vm-snooze-rennes.raw"
+backing_file_name="squeeze-mapreduce-mpi-vm-snooze-rennes.qcow2"
 backing_file_path="$source_images_directory/$backing_file_name"
 destination_images_directory="$destination_snooze_directory/images"
 
